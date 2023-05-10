@@ -19,4 +19,8 @@ app.use('/graphql',cors({ origin: "*" }),graphqlHTTP({
     graphiql : true
 }));
 
+app.get('/',(req,res)=>{
+    res.send("backed!!!!!");
+});
+
 app.listen(port,()=> console.log("server is running on port "+port));
