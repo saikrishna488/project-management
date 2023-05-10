@@ -1,15 +1,16 @@
 {
-    "version": 2,
+    "version": 1,
+    "name : "saikrishna488",
     "builds": [
       {
         "src": "server/index.js",
-        "use": "@now/node"
+        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "server/server.js"
+        "dest": "server/index.js"
       }
     ]
   }
