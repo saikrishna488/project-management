@@ -4,7 +4,7 @@ import { DELETE_CLIENT } from '../Mutation/clientMutations';
 import { GET_CLIENTS } from '../queries/ClientQueries'
 
 const ClientRow = ({client}:any) => {
-    const [deleteClient] = useMutation(DELETE_CLIENT,{
+    const [deleteClient]:any = useMutation(DELETE_CLIENT,{
         variables: {id:client.id},
         // refetchQueries : [{query:GET_CLIENTS}] // this is not the best way to do it
         update(cache){ // this is the best way to do it

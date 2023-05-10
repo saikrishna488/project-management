@@ -1,4 +1,3 @@
-import React from 'react'
 import AddClient from '../components/AddClient'
 import Clients from '../components/Clients'
 import Projects from '../components/Projects'

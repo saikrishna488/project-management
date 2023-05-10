@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaUser,FaPhone } from 'react-icons/fa'
 import {AiOutlineMail} from 'react-icons/ai'
 
