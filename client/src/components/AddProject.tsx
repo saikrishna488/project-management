@@ -74,6 +74,7 @@ const AddProject = () => {
                                 </select>
                                 <label className="form-label">Clients</label>
                                 <select name="" id="status" className="form-select" value={clientId} onChange={e=> setClientId(e.target.value)}>
+                                <option value="">Not Selected</option>
                                     {data.clients.map((client:any)=>(
                                         <option key={client.id} value={client.id}>{client.name}</option>
                                     ))}

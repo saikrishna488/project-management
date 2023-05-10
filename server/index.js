@@ -16,7 +16,7 @@ connectDb();
 app.use(cors());
 app.use('/graphql',graphqlHTTP({
     schema,
-    graphiql : true
+    graphiql : process.env.NODE_ENV == "development" ? true : false,
 }));
 
 app.listen(port,()=> console.log("server is running on port "+port));
