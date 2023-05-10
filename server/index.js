@@ -20,7 +20,7 @@ app.use('/graphql',cors({ origin: "*" }),graphqlHTTP({
 }));
 
 app.get('/',(req,res)=>{
-    res.send("backed!!!!");
+    res.send("backend!!");
 });
 
 app.listen(port,()=> console.log("server is running on port "+port));
