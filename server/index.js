@@ -14,9 +14,13 @@ connectDb();
 
 //graphql endpoint
 app.use(cors());
-app.use('/graphql',graphqlHTTP({
+app.use('/graphql',cors({ origin: "*" }),graphqlHTTP({
     schema,
     graphiql : process.env.NODE_ENV == "development" ? true : false,
 }));
+
+app.get('/',(req,res)=>{
+    res.send("backed!!!!");
+});
 
 app.listen(port,()=> console.log("server is running on port "+port));

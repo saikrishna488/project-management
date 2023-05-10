@@ -35,7 +35,7 @@ const AddProject = () => {
     const submit = (e: any) => {
         e.preventDefault();
 
-        if (name === '' || description === '' || status === '' || clientId === '')
+        if (name === '' || description === '' || clientId === '')
             return alert('Please fill all fields');
         
         addProject(name, description, status,clientId);
@@ -74,7 +74,11 @@ const AddProject = () => {
                                 </select>
                                 <label className="form-label">Clients</label>
                                 <select name="" id="status" className="form-select" value={clientId} onChange={e=> setClientId(e.target.value)}>
+<<<<<<< HEAD
                                 <option value="">Not Selected</option>
+=======
+                                    <option value="">Not Selected</option>
+>>>>>>> 9c5681f48e3405a6c82d77b75ecab506a04a1f1c
                                     {data.clients.map((client:any)=>(
                                         <option key={client.id} value={client.id}>{client.name}</option>
                                     ))}
